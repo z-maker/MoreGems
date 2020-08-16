@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "more_gems:pink_diamond_block"
+    }
+  ],
+  "result": {
+    "item": "more_gems:pink_diamond",
+    "count": 9
+  }
+}

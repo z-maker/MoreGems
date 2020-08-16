@@ -1,0 +1,12 @@
+{
+  "item.more_gems.ruby": "Ruby",
+  "item.more_gems.pink_diamond": "Pink Diamond",
+
+  "block.more_gems.ruby_block": "Block of Ruby",
+  "block.more_gems.pink_diamond_block": "Block of Pink Diamond",
+
+  "item.more_gems.ruby_sword": "Ruby Sword",
+  "item.more_gems.pink_diamond_sword": "Pink Diamond Sword",
+
+  "itemGroup.gems_tab": "More gems"
+}
