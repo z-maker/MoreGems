@@ -1,12 +1,15 @@
 package com.ironlabs.moregems.util;
 
 import com.ironlabs.moregems.MoreGems;
+import com.ironlabs.moregems.armor.ModArmorMaterial;
 import com.ironlabs.moregems.blocks.BlockItemBase;
 import com.ironlabs.moregems.blocks.PinkDiamondBlock;
 import com.ironlabs.moregems.blocks.RubyBlock;
 import com.ironlabs.moregems.items.ItemBase;
 import com.ironlabs.moregems.tools.ModItemTier;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
@@ -39,6 +42,23 @@ public class RegistryHandler {
     public static final RegistryObject<SwordItem> PINK_DIAMOND_SWORD = ITEMS.register(ModItemTier.PINK_DIAMOND_SWORD,()->
             new SwordItem(ModItemTier.PINK_DIAMOND,2, -2.4f,
                     new Item.Properties().group(MoreGems.GEMS_TAB)));
+
+    //Armor
+    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () ->
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(MoreGems.GEMS_TAB)));
+
+    public static final RegistryObject<ArmorItem> RUBY_CHEST = ITEMS.register("ruby_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(MoreGems.GEMS_TAB)));
+
+    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () ->
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(MoreGems.GEMS_TAB)));
+
+    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () ->
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(MoreGems.GEMS_TAB)));
+
+    public static final RegistryObject<ArmorItem> PRINCESS_HELMET = ITEMS.register("princess_helmet", () ->
+            new ArmorItem(ModArmorMaterial.PRINCESS_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(MoreGems.GEMS_TAB)));
+
 
     //Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register(RubyBlock.BLOCK_NAME,RubyBlock::new);

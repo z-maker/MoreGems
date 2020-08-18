@@ -8,6 +8,7 @@ public class ItemBase extends Item {
     public static final String RUBY_ITEM = "ruby";
     public static final String PINK_DIAMOND_ITEM = "pink_diamond";
 
+
     public ItemBase() {
         super(new Item.Properties().group(MoreGems.GEMS_TAB));
     }
