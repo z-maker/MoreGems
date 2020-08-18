@@ -56,8 +56,16 @@ public class RegistryHandler {
     public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () ->
             new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(MoreGems.GEMS_TAB)));
 
+    //princess armor
+
     public static final RegistryObject<ArmorItem> PRINCESS_HELMET = ITEMS.register("princess_helmet", () ->
             new ArmorItem(ModArmorMaterial.PRINCESS_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(MoreGems.GEMS_TAB)));
+    public static final RegistryObject<ArmorItem> PRINCESS_CHEST = ITEMS.register("princess_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.PRINCESS_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(MoreGems.GEMS_TAB)));
+    public static final RegistryObject<ArmorItem> PRINCESS_LEGGINGS = ITEMS.register("princess_leggings", () ->
+            new ArmorItem(ModArmorMaterial.PRINCESS_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(MoreGems.GEMS_TAB)));
+    public static final RegistryObject<ArmorItem> PRINCESS_BOOTS = ITEMS.register("princess_boots", () ->
+            new ArmorItem(ModArmorMaterial.PRINCESS_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(MoreGems.GEMS_TAB)));
 
 
     //Blocks
