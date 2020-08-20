@@ -12,6 +12,7 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -41,7 +42,7 @@ public class RegistryHandler {
 
     public static final RegistryObject<SwordItem> PINK_DIAMOND_SWORD = ITEMS.register(ModItemTier.PINK_DIAMOND_SWORD,()->
             new SwordItem(ModItemTier.PINK_DIAMOND,2, -2.4f,
-                    new Item.Properties().group(MoreGems.GEMS_TAB)));
+                    new Item.Properties().group(MoreGems.GEMS_TAB).addToolType(ToolType.PICKAXE,10)));
 
     //Armor
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () ->

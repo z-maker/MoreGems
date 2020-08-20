@@ -8,10 +8,10 @@ import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
 
-    RUBY(3, 800, 7.0f, 3.0f, 12, () -> {
+    RUBY(10, 1000, 20.0f, 100.0f, 12, () -> {
         return Ingredient.fromItems(RegistryHandler.RUBY_SWORD.get());
     }),
-    PINK_DIAMOND(3, 800, 7.0f, 3.0f, 12, () -> {
+    PINK_DIAMOND(10, 1000, 20.0f, 100.0f, 12, () -> {
         return Ingredient.fromItems(RegistryHandler.PINK_DIAMOND_SWORD.get());
     });
 
