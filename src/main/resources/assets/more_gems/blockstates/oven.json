@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "more_gems:block/oven" },
+    "facing=south": { "model": "more_gems:block/oven", "y":  180},
+    "facing=west": { "model": "more_gems:block/oven", "y":  270},
+    "facing=east": { "model": "more_gems:block/oven", "y":  90}
+  }
+}
