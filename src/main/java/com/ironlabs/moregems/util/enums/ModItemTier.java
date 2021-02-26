@@ -1,7 +1,6 @@
 package com.ironlabs.moregems.util.enums;
 
 import com.ironlabs.moregems.init.ModItems;
-import com.ironlabs.moregems.util.RegistryHandler;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
@@ -12,18 +11,10 @@ public enum ModItemTier implements IItemTier {
     RUBY(3, 800, 7.0F, 3.0F, 12, () -> {
         return Ingredient.fromItems(ModItems.RUBY.get());
     }),
-
-    RUBY_PICKAXE(10, 1000, 20.0f, 100.0f, 12, () -> {
-        return Ingredient.fromItems(ModItems.RUBY_AXE.get());
-    }),
-
-    RUBY_AXE(10, 1000, 20.0f, 100.0f, 12, () -> {
-        return Ingredient.fromItems(ModItems.RUBY_PICKAXE.get());
-    }),
-
-    PINK_DIAMOND(10, 1000, 20.0f, 100.0f, 12, () -> {
-        return Ingredient.fromItems(ModItems.PINK_DIAMOND_SWORD.get());
+    PINK_DIAMOND(3, 800, 7.0F, 3.0F, 12, () -> {
+        return Ingredient.fromItems(ModItems.PINK_DIAMOND.get());
     });
+
 
     private final int harvestLevel;
     private final int maxUses;

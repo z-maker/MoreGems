@@ -2,7 +2,6 @@ package com.ironlabs.moregems.util.enums;
 
 import com.ironlabs.moregems.MoreGems;
 import com.ironlabs.moregems.init.ModItems;
-import com.ironlabs.moregems.util.RegistryHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;

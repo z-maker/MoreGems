@@ -5,6 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
@@ -20,6 +21,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
+
 
 public class HogEntity extends AnimalEntity {
 
@@ -32,16 +35,12 @@ public class HogEntity extends AnimalEntity {
         super(type, worldIn);
     }
 
-//    //func_233666_p_ ---> registerAttributes()
-//    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
-//        return MobEntity.func_233666_p_()
-//                .createMutableAttribute(Attributes.MAX_HEALTH, 10.0D)
-//                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D);
-//    }
+    //func_233666_p_ ---> registerAttributes()
+    public static AttributeModifierMap.MutableAttribute setCustomAttributes(){
 
-    @Override
-    public AgeableEntity createChild(AgeableEntity ageable) {
-        return ModEntityType.HOG.get().create(this.world);
+        return MobEntity.func_233666_p_()
+                .func_233815_a_(Attributes.field_233818_a_, 12.0D)
+                .func_233815_a_(Attributes.field_233821_d_, 0.25D);
     }
 
     @Override
@@ -57,6 +56,12 @@ public class HogEntity extends AnimalEntity {
         this.goalSelector.addGoal(6, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
         this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
+    }
+
+    @Nullable
+    @Override
+    public AgeableEntity createChild(AgeableEntity ageable) {
+        return ModEntityType.HOG.get().create(this.world);
     }
 
     @Override
@@ -102,4 +107,5 @@ public class HogEntity extends AnimalEntity {
             super.handleStatusUpdate(id);
         }
     }
+
 }

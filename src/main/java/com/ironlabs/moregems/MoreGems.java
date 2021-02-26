@@ -1,12 +1,14 @@
 package com.ironlabs.moregems;
 
+import com.ironlabs.moregems.entities.HogEntity;
 import com.ironlabs.moregems.init.ModBlocks;
 import com.ironlabs.moregems.init.ModEntityType;
 import com.ironlabs.moregems.init.ModItems;
-import com.ironlabs.moregems.util.RegistryHandler;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -33,9 +35,11 @@ public class MoreGems
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-
+    private void setup(final FMLCommonSetupEvent event){
+        DeferredWorkQueue.runLater(()->{
+            GlobalEntityTypeAttributes.put(ModEntityType.HOG.get(),
+                    HogEntity.setCustomAttributes().func_233813_a_());
+        });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -50,5 +54,5 @@ public class MoreGems
         }
     };
 
-
+//[15:47:51] [Worker-Main-2/ERROR] [minecraft/GlobalEntityTypeAttributes]: Entity more_gems:hog has no attributes
 }

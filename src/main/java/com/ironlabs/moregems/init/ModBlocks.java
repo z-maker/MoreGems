@@ -2,6 +2,7 @@ package com.ironlabs.moregems.init;
 
 import com.ironlabs.moregems.MoreGems;
 import com.ironlabs.moregems.blocks.Oven;
+import com.ironlabs.moregems.blocks.PinkDiamondBlock;
 import com.ironlabs.moregems.blocks.RubyBlock;
 import com.ironlabs.moregems.blocks.RubyOre;
 import net.minecraft.block.Block;
@@ -16,5 +17,8 @@ public class ModBlocks {
     // Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);
     public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
+
+    public static final RegistryObject<Block> PINK_DIAMOND_BLOCK = BLOCKS.register(PinkDiamondBlock.BLOCK_NAME,PinkDiamondBlock::new);
+
     public static final RegistryObject<Block> OVEN = BLOCKS.register("oven", Oven::new);
 }
