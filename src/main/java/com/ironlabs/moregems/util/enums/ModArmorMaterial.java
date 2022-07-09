@@ -21,7 +21,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 10f, () -> Ingredient.fromItems(ModItems.PINK_DIAMOND.get()),0),
 
     PRINCESS_ARMOR(MoreGems.MOD_ID + ":princess_armor", 25, new int[]{2,5,5,10},25,
-            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 10f, () -> Ingredient.fromItems(ModItems.RUBY.get()),0)
+            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 100f, () -> Ingredient.fromItems(ModItems.RUBY.get()),0)
     ;
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] { 11, 16, 15, 13 };

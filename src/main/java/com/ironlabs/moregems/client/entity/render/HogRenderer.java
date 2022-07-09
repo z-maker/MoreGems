@@ -10,7 +10,8 @@ import net.minecraft.util.ResourceLocation;
 
 public class HogRenderer extends MobRenderer<HogEntity, HogModel<HogEntity>> {
 
-    protected static final ResourceLocation TEXTURE = new ResourceLocation(MoreGems.MOD_ID, "textures/entity/hog.png");
+    protected static final ResourceLocation TEXTURE =
+            new ResourceLocation(MoreGems.MOD_ID, "textures/entity/hog.png");
 
     public HogRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new com.ironlabs.moregems.client.entity.model.HogModel<>() , 0.7f);

@@ -2,6 +2,7 @@ package com.ironlabs.moregems.util;
 
 
 import com.ironlabs.moregems.MoreGems;
+import com.ironlabs.moregems.client.entity.render.DuckRenderer;
 import com.ironlabs.moregems.client.entity.render.HogRenderer;
 import com.ironlabs.moregems.init.ModEntityType;
 import com.ironlabs.moregems.items.ModSpawnEggItem;
@@ -19,6 +20,7 @@ public class ClientEventBusSubscriber {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityType.HOG.get(), HogRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityType.DUCK.get(), DuckRenderer::new);
     }
 
     @SubscribeEvent

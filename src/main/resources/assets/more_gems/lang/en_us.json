@@ -5,6 +5,9 @@
   "itemGroup.more_gemsTab": "Tutorial",
   "item.more_gems.ruby_shovel": "Ruby Shovel",
   "item.more_gems.ruby_hoe": "Ruby Hoe",
+
+  "item.more_gems.duck_spawn_egg": "Duck Spawn Egg",
+  "entity.more_gems.duck": "Duck",
   "item.more_gems.hog_spawn_egg": "Hog Spawn Egg",
   "entity.more_gems.hog": "Hog",
 

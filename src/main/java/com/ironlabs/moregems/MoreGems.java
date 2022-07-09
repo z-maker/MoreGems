@@ -1,5 +1,6 @@
 package com.ironlabs.moregems;
 
+import com.ironlabs.moregems.entities.DuckEntity;
 import com.ironlabs.moregems.entities.HogEntity;
 import com.ironlabs.moregems.init.ModBlocks;
 import com.ironlabs.moregems.init.ModEntityType;
@@ -15,6 +16,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.io.BufferedWriter;
 
 @Mod("more_gems")
 public class MoreGems
@@ -35,10 +38,17 @@ public class MoreGems
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+    //Add a line for every mob to set custom attributes
     private void setup(final FMLCommonSetupEvent event){
         DeferredWorkQueue.runLater(()->{
-            GlobalEntityTypeAttributes.put(ModEntityType.HOG.get(),
-                    HogEntity.setCustomAttributes().func_233813_a_());
+            GlobalEntityTypeAttributes.put(
+                    ModEntityType.HOG.get(),
+                    HogEntity.setCustomAttributes().func_233813_a_()
+            );
+            GlobalEntityTypeAttributes.put(
+                    ModEntityType.DUCK.get(),
+                    DuckEntity.setCustomAttributes().func_233813_a_()
+            );
         });
     }
 
